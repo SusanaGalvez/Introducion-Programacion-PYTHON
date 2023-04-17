@@ -43,7 +43,7 @@ def app():
             eliminar_contacto()
             preguntar = False
         else:
-            print('Intente de nuevo')
+            print('Intentelo de nuevo')
 
 
 def mostrar_contactos():
@@ -65,8 +65,8 @@ def agregar_contacto():
     nombre_contacto = input('Nombre del Nuevo Contacto:\r\n')
 
     # Revisar si el archivo ya existe antes de crearlo
-    existe = existe_contacto(
-        nombre_contacto)  # en el video pone dentro de los parentesis nombre_anterior,pero me lo pone en rojo
+    existe = existe_contacto(nombre_contacto)
+          # en el video pone dentro de los parentesis nombre_anterior,pero me lo pone en rojo
 
     if not existe:
         with open(CARPETA + nombre_contacto + EXTENSION, 'w') as archivo:
@@ -74,7 +74,7 @@ def agregar_contacto():
             telefono_contacto = input('Agrega el Telefono:\r\n')
             categoria_contacto = input('Categoría Contacto:\r\n')
 
-            # Intanciamos la clase
+            # Instanciamos la clase
             contacto = Contacto(nombre_contacto, telefono_contacto, categoria_contacto)
 
             # Escribir en el Archivo
@@ -89,7 +89,7 @@ def agregar_contacto():
         print('Ese contacto ya existe')
 
     # Para que vuelva a salir las preguntas
-    # app()
+    #app()
 
 
 def editar_contacto():
@@ -131,7 +131,7 @@ def eliminar_contacto(expression=None):
     nombre = input('Seleccione el Contacto a eliminar:\r\n')
     try:
         os.remove(CARPETA + nombre + EXTENSION)
-        print('\r\nEliminado Correctamente')
+        print('\r\n Contacto eliminado correctamente')
     except Exception as ex:
         print(ex)
         print('No existe ese contacto')
@@ -149,8 +149,7 @@ def mostrar_menu():
 
 
 def buscar_contacto():
-    nombre = input('Selecciones el contacto a buscar')
-
+    nombre = input('Selecciona el contacto a buscar: \r\n')
     try:
 
         with open(CARPETA + nombre + EXTENSION) as contacto:
