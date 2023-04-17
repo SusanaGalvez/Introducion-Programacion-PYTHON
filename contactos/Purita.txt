@@ -1,0 +1,3 @@
+Nombre: Puri
+Telefono: 232323
+Categoria: fsdfsdfsdf
