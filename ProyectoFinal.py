@@ -113,11 +113,10 @@ def editar_contacto():
             archivo.write('Telefono: ' + contacto.telefono + "\r\n")
             archivo.write('Categoria: ' + contacto.categoria + "\r\n")
 
-            # Renombramos el Archivo
-            os.rename(CARPETA + nombre_anterior + EXTENSION, CARPETA + nombre_contacto + EXTENSION)
-
-            # Mostrar mensaje de Éxito
-            print('\r\nCONTACTO EDITADO CORRECTAMENTE\r\n')
+        # Renombramos el Archivo
+        os.rename(CARPETA + nombre_anterior + EXTENSION, CARPETA + nombre_contacto + EXTENSION)
+        # Mostrar mensaje de Éxito
+        print('\r\nCONTACTO EDITADO CORRECTAMENTE\r\n')
 
     else:
         print('ESE CONTACTO NO EXISTE')

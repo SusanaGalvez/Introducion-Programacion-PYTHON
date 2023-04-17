@@ -1,0 +1,3 @@
+Nombre: Antoñito
+Telefono: 4343434343
+Categoria: Pintor
